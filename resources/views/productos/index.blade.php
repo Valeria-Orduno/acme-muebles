@@ -15,8 +15,8 @@
                         </p>
                         
                         @if(auth()->user()->isAdmin())
-                            <!-- Vista para admin con botones Editar y Eliminar -->
-                            <a href="{{ route('productos.edit', $producto->id) }}" class="btn btn-warning">Editar</a>
+                            <!-- Vista para admin con botones Editar (falta implementar) y Eliminar -->
+                            <a href="{{ route('productos.index') }}" class="btn btn-warning">Editar</a>
                             
                             <form action="{{ route('productos.destroy', $producto->id) }}" method="POST" style="display: inline-block;">
                                 @csrf
@@ -39,7 +39,7 @@
                                     </p>
                                 @endif
                             @endif
-                            <!-- Botón de comprar para el cliente -->
+                            <!-- Botón de comprar para el cliente (falta implementar)-->
                             <a href="{{ route('productos.show', $producto->id) }}" class="btn btn-primary">Comprar</a>
                         @endif
 
